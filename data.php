@@ -11,17 +11,17 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 echo "Connected successfully";
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-  $fname = test_input($_POST["fname"]);
-  $lname=test_input($_POST["lname"]);
-  $email = test_input($_POST["em"]);
-  $pass=test_input($_POST["pass1"]);
-  $cpass=test_input($_POST["pass2"]);
-  $gender = test_input($_POST["gender"]);
-  $phn=test_input($_POST["phone"]);
-  $country=test_input($_POST["country"]);
-  $dob=test_input($_POST["dob"]);
-}
+
+  $fname = $_POST["fname"];
+  $lname=$_POST["lname"];
+  $email = $_POST["em"];
+  $pass=$_POST["pass1"];
+  $cpass=$_POST["pass2"];
+  $gender = $_POST["gender"];
+  $phn=$_POST["phone"]);
+  $country=$_POST["country"];
+  $dob=$_POST["dob"];
+
 $sql = "INSERT INTO reg_1 (fname, lname, dob,email,pass,cpass,pn,country)
 VALUES ($fname,$lname,$dob,$email,$pass,$cpass,$phn,$country)";
 
