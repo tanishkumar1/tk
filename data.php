@@ -1,4 +1,5 @@
 <?php
+echo "Hello";
 $servername = "35.202.118.228";
 $username = "tk";
 $password = "Tanish@123";
