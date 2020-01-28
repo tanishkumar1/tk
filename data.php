@@ -22,8 +22,8 @@ if ($conn->connect_error) {
 }
 
 
-$sql = "INSERT INTO reg_1 (fname, lname, dob,email,pass,cpass,pn,country)
-VALUES ('$fname','$lname','$dob','$email','$pass','$cpass','$phn','$country')";
+$sql = "INSERT INTO reg_1 (fname, lname, gender, dob,email,pass,cpass,pn,country)
+VALUES ('$fname','$lname','m','$dob','$email','$pass','$cpass','$phn','$country')";
 
 if ($conn->query($sql) === TRUE) {
     echo "New record created successfully";
