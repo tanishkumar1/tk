@@ -23,7 +23,7 @@ echo "Connected successfully";
   $dob=$_POST["dob"];
 
 $sql = "INSERT INTO reg_1 (fname, lname, dob,email,pass,cpass,pn,country)
-VALUES ($fname,$lname,$dob,$email,$pass,$cpass,$phn,$country)";
+VALUES ('$fname','$lname','$dob','$email','$pass','$cpass','$phn','$country')";
 
 if ($conn->query($sql) === TRUE) {
     echo "New record created successfully";
