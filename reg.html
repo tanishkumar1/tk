@@ -60,7 +60,7 @@ h1,p{
 <body>
 	<h1 style="text-align:center;"><i>Registration Form<i></h1>
 	<p style="text-align:center;">Please fill in this form to create an account.</p>
-	<form name="mf"style="text-align:center;" id="mform"onSubmit="return validate()"action="http://35.202.118.228/tk/data.php"method="POST" >
+	<form name="mf"style="text-align:center;" id="mform"onSubmit="return validate()" >
 		<table id="tb">
 			<tr>
 				<th id="ab">First Name</th>
@@ -178,6 +178,25 @@ h1,p{
 			{
 				document.mf.phone.style.borderColor="#ccc";
 			}
+			var fname=document.mf.fname.value;
+			var lname=document.mf.lname.value;
+			var em=document.mf.em.value;
+			var pass1=document.mf.pass1.value;
+			var pass2=document.mf.pass2.value;
+			var phone=document.mf.phone.value;
+			var country=document.mf.country.value;
+			var dob=document.mf.dob.value;
+			$.ajax({
+			type: 'POST',
+			async: false,
+			data:{fname,lname,em,pass1,pass2,phone,country,dob},
+			success: function(response){
+			console.log(response);
+			},
+			error: function(error){
+			console.log(error);
+			}
+			});
 		}
 		
 
