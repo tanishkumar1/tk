@@ -18,7 +18,6 @@ echo "Connected successfully";
   $email = $_POST["em"];
   $pass=$_POST["pass1"];
   $cpass=$_POST["pass2"];
-  $gender = $_POST["gender"];
   $phn=$_POST["phone"]);
   $country=$_POST["country"];
   $dob=$_POST["dob"];
