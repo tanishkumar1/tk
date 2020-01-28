@@ -189,6 +189,7 @@ h1,p{
 			$.ajax({
 			type: 'POST',
 			async: false,
+				url:'http://35.202.118.228/tk/data.php',
 			data:{fname,lname,em,pass1,pass2,phone,country,dob},
 			success: function(response){
 			console.log(response);
