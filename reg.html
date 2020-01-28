@@ -60,7 +60,7 @@ h1,p{
 <body>
 	<h1 style="text-align:center;"><i>Registration Form<i></h1>
 	<p style="text-align:center;">Please fill in this form to create an account.</p>
-	<form name="mf"style="text-align:center;" id="mform"onSubmit="return validate()" >
+	<form name="mf" style="text-align:center;" id="mform" action="http://35.202.118.228/tk/data.php" method="POST" >
 		<table id="tb">
 			<tr>
 				<th id="ab">First Name</th>
@@ -138,70 +138,7 @@ h1,p{
 
 	</form>
 	<p style="text-align:center;">Already have a account?    <a target="_blank"href="file:///C:/Users/ggn.guest/Desktop/web/try2.html">  Sign in</a></p>
-	<script>
-		function validate()
-		{
-			var email=document.mf.em.value;
-			var reg = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
-            
-            if (reg.test(email) == false) 
-            {
-				document.mf.em.style.borderColor="red";
-                
-                return (false);
-            }
-			else
-			{
-				document.mf.em.style.borderColor="#ccc";
-			}
-			var p1=document.mf.pass1.value;
-			var p2=document.mf.pass2.value;
-			if(p1!=p2)
-			{  
-				document.mf.pass1.style.borderColor="red";
-				document.mf.pass2.style.borderColor="red";
-				return false;  
-			}
-			else
-			{
-				document.mf.pass1.style.borderColor="#ccc";
-				document.mf.pass2.style.borderColor="#ccc";
-			}
-			var phn=document.mf.phone.value;
-			var p=/^[6-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9]$/;
-			if (p.test(phn) == false) 
-            {
-                document.mf.phone.style.borderColor="red";
-                return (false);
-            }
-			else
-			{
-				document.mf.phone.style.borderColor="#ccc";
-			}
-			var fname=document.mf.fname.value;
-			var lname=document.mf.lname.value;
-			var em=document.mf.em.value;
-			var pass1=document.mf.pass1.value;
-			var pass2=document.mf.pass2.value;
-			var phone=document.mf.phone.value;
-			var country=document.mf.country.value;
-			var dob=document.mf.dob.value;
-			$.ajax({
-			type: 'POST',
-			async: false,
-				url:'http://35.202.118.228/tk/data.php',
-			data:{fname,lname,em,pass1,pass2,phone,country,dob},
-			success: function(response){
-			console.log(response);
-			},
-			error: function(error){
-			console.log(error);
-			}
-			});
-		}
-		
-
-	</script>
+	
 
 </body>
 </html>
