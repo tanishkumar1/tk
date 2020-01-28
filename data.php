@@ -1,7 +1,7 @@
 <?php
 echo "Hello";
 $servername = "35.202.118.228";
-$username = "tk";
+$username = "root";
 $password = "Tanish@123";
 $dbname="reg";
 // Create connection
